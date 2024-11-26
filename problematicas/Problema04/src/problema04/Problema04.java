@@ -17,21 +17,62 @@ public class Problema04 {
 
        
        double num = 1;
-       double resultado = 1;
+       double num2 = 1;
+     
+       String cadena = "";
+       
        double resta = 0;
        double suma = 0;
+       
 
        while(num < 15){
            num += 2;
-           resta = resultado - 1/num;
-           suma += resta;
-           resultado += suma;
+           if(num == 1 || num == 3 || num == 7 || num == 11 || num == 15){
+               cadena = "" +  "1/"+num+" +";
+               resta = num2 - (1/num);
+               num2 += resta;
+              
+               
+               
+           }else{
+               
+               if(num <= 1 || num == 5 || num == 9 || num == 13)
+                  
+                    cadena = "" + "1/"+num+" -";
+                  
+                   suma = num2 + (1/num);
+                    num2 += suma;
+               
+                
+                
+                
+               
+           }
+           
+           
+           
+              System.out.printf(" %s", cadena); 
+          
+          /*
+           num += 2;
+           resta = num2 - (1/num);
+           num2 += resta;
+           suma = num2;
+           */
+          
+          
+
+           
            
           
-           System.out.printf("1 -"+" 1/"+num+ " : %.2f\n",
-                   resultado);
+      
+       
+           
+           
 
 
        }
+       
+       
         }
     }
